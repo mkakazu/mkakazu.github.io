@@ -1,21 +1,22 @@
-- name: RSSify Any
-  uses: tabhub/rssify@v2
-  with:
-    # RSS title
-    title: okinawatimes
-    # RSS subtitle
-    subtitle: # optional
-    # Website url
-    url: https://www.okinawatimes.co.jp/category/news-original
-    # CSS selector to get item title
-    item-title-css: a.c-card.c-card--vertical > div > div.c-card__title
-    # CSS selector to get item url
-    item-url-css: a.c-card.c-card--vertical[href]
-    # CSS selector to get item description
-    item-description-css: # optional
-    # CSS selector to get Item post date
-    item-date-css: a.c-card.c-card--vertical > div > div.c-card__title > div > time
-    # Date format of item post date, help to parse date
-    item-date-format: # optional
-    # Timezone applied to item post date
-    item-timezone: Japan # optional, default is Asia/Shanghai
+name: Test RSS generation
+
+on:
+   schedule:
+     - cron: "0 15 * * *"
+
+jobs:
+  gene-rss:
+    runs-on: ubuntu-latest
+    name: A job to test RSS generation
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Test Rssify
+      uses: tabhub/rssify@v2
+      with:
+        title: okinawatimes
+        url: https://www.okinawatimes.co.jp/category/news-original
+        item-title-css: a.c-card.c-card--vertical > div > div.c-card__title
+        item-url-css: a.c-card.c-card--vertical[href]
+        item-date-css: a.c-card.c-card--vertical > div > div.c-card__title > div > time
+        item-timezone: Japan
