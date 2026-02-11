@@ -17,6 +17,7 @@ jobs:
         title: okinawatimes
         url: https://www.okinawatimes.co.jp/category/news-original
         item-title-css: a.c-card.c-card--vertical > div > div.c-card__title
+        item_description_selector: a.c-card.c-card--vertical > div > div.c-card__title
         item-url-css: a.c-card.c-card--vertical[href]
         item-date-css: a.c-card.c-card--vertical > div > div.c-card__title > div > time
         item-timezone: Japan
