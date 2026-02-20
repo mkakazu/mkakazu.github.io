@@ -22,4 +22,5 @@ jobs:
         item_description_selector: a.c-card.c-card--vertical > div > div.c-card__title
         item-url-css: a.c-card.c-card--vertical[href]
         item-date-css: a.c-card.c-card--vertical > div > div.c-card__title > div > time
+        item-date-format: '%Y年%m月%d日'
         item-timezone: Japan
