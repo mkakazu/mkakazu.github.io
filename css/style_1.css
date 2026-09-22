@@ -1,0 +1,67 @@
+* {
+    border: 0;
+    font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6,p,div {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {font-size: 2em !important;}
+h3 {font-size: 1.5em !important;}
+h4 {font-size: 1.25em !important;}
+h5 {font-size: 1.15em !important;}
+h6 {font-size: 1.05em !important;}
+
+h2 {}
+
+body {
+    margin: auto;
+    width: 75% !important;
+}
+
+@media (min-aspect-ratio: 4/3) {
+    body {
+        width: 60% !important;
+    }
+}
+@media (max-aspect-ratio: 3/4) {
+    body {
+        width: 90% !important;
+    }
+}
+
+.lyricsa {
+    font-family: "Yuji Syuku";
+    font-size: 1.5em;
+    padding-left: 0.5em;
+}
+
+div table {
+    width: 100%;
+}
+
+div table tbody tr td:first-child {
+    width: 50%;
+}
+
+img {
+    width: 100%;
+}
+
+.img_split p img {
+    width: 49.5% !important;
+}
+
+table {
+    border: none;
+}
+
+td {
+    text-justify: inter-character !important;
+}
+
+#back_btn {
+    float: right;
+}
